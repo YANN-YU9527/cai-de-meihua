@@ -1,0 +1,7 @@
+interface:
+  display_name: "菜的美化"
+  short_description: "自然美化菜品、补全盘子并保持其他内容不变"
+  default_prompt: "使用 $cai-de-meihua 美化这张菜品照片，必要时补全盘子并高清输出，其他内容保持不变。"
+
+policy:
+  allow_implicit_invocation: true
