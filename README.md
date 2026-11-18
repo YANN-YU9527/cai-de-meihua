@@ -1,2 +1,86 @@
-# cai-de-meihua
-Conservatively beautify food photos, restore cropped plates, and produce high-definition results while preserving everything else.
+# 菜的美化 / Dish Photo Beautifier
+
+自然、克制地美化菜品照片；必要时补全被裁切的盘子并输出高清图片，同时尽量保持其他内容不变。
+
+Conservatively beautify food photographs, restore cropped plates when necessary, and produce high-definition results while preserving everything else.
+
+## 主要功能
+
+- 对菜品进行自然、克制的清晰度、曝光、对比度、高光和色彩优化。
+- 保持原有食材、分量、数量、形状、熟度、装饰、摆放和相对位置不变。
+- 保持原始拍摄角度、方向、盘子姿态、背景、桌面、光线、阴影、反射和景深不变。
+- 当盘子被裁切时，只扩展最小范围，补全完整盘子并保留自然边距。
+- 当盘子已经完整时，不改变盘子形状，也不无故扩展画布。
+- 输出干净、真实的高清效果，避免过度饱和、假光泽、塑料质感、光晕、过度锐化和 HDR 痕迹。
+
+## 安装方法
+
+在 Codex 中发送下面这句话：
+
+> 请使用 `$skill-installer` 从 `https://github.com/hugoyu18-rgb/cai-de-meihua` 仓库根目录安装，并将 Skill 命名为 `cai-de-meihua`。
+
+安装完成后，在下一轮对话中即可使用。
+
+## 手动安装
+
+1. 点击本仓库右上方绿色的 `Code` 按钮。
+2. 选择 `Download ZIP`。
+3. 解压下载的 ZIP 文件。
+4. 将解压后的文件夹复制到：
+
+```text
+C:\Users\你的用户名\.codex\skills\cai-de-meihua
+```
+
+5. 确认文件夹根目录中存在 `SKILL.md`。
+6. 重新打开 Codex；如果 Skill 没有显示，请重启 Codex。
+
+## 使用方法
+
+向 Codex 上传需要处理的菜品照片，然后发送：
+
+> 使用 `$cai-de-meihua` 美化这张菜品照片，必要时补全盘子并高清输出，其他内容保持不变。
+
+也可以补充具体要求，例如：
+
+- 自然提升菜品的清晰度、亮度和质感，其他不变。
+- 补全被裁切的盘子，但保持原来的拍摄角度和背景。
+- 盘子已经完整，只美化菜品，不扩展画布。
+- 保留原来的食材、数量、摆放、装饰和颜色。
+- 不要增加食物，不要更换餐具，不要修改背景。
+
+## 默认保留内容
+
+除非用户明确提出修改要求，否则默认保持以下内容不变：
+
+- 食材、分量、数量、熟度、装饰和摆放
+- 拍摄角度、画面方向和盘子姿态
+- 盘子材质、图案和装饰
+- 背景、桌面、餐具、道具和杂物
+- 文字、Logo、水印和标签
+- 光线方向、阴影、反射、景深和画面颗粒
+
+## 与“菜品照片精修”的区别
+
+`cai-de-meihua` 默认只进行保守美化和必要的盘子补全，不会主动清除杂物、文字或水印，也不会改变拍摄角度。
+
+如果需要清除杂物与文字、补全整个画面，并统一为约 25° 的餐厅风格拍摄角度，应使用 `polish-food-photo`。
+
+## 重要说明
+
+生成式图片编辑无法保证像素级完全一致。本 Skill 会优先保护原图内容，并在美化要求与原图保持发生冲突时选择更轻微的调整。
+
+请只处理你拥有或获准编辑的图片。
+
+## 仓库结构
+
+```text
+cai-de-meihua/
+├─ SKILL.md
+└─ agents/
+   └─ openai.yaml
+```
+
+## License
+
+MIT License
